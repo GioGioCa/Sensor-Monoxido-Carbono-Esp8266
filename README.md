@@ -4,5 +4,5 @@ Creditos a su autor original: Ingeniero Ángel Javier Delgado Ibarra.
 Y a contribuyentes:
 Ingeniero Christian Axel Rodriguez Medrano.
 Ingeniero Giovanni Gómez.
-![Imagen aluciva a la aplicación](Screenshots/appBlynk.jpeg)
+![Imagen aluciva a la aplicación](Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/appBlynk.jpeg )
 ![Instalación fisica del sistema](Screenshots/instalacionFisica.jpeg)

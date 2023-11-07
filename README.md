@@ -5,4 +5,4 @@ Y a contribuyentes:
 Ingeniero Christian Axel Rodriguez Medrano.
 Ingeniero Giovanni Gómez.
 ![Imagen aluciva a la aplicación](Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/appBlynk.jpeg )
-![Instalación fisica del sistema](Screenshots/instalacionFisica.jpeg)
+![Instalación fisica del sistema](Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/instalacionFisica.jpeg)

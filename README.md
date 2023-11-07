@@ -6,3 +6,6 @@ Ingeniero Christian Axel Rodriguez Medrano.
 Ingeniero Giovanni Gómez.
 ![Imagen aluciva a la aplicación](Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/appBlynk.jpeg )
 ![Instalación fisica del sistema](Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/instalacionFisica.jpeg)
+
+## Screenshots
+<img width="600" alt="app" src="Arduino/Sensor-Monoxido-Carbono-Esp8266/Screenshots/appBlynk.jpeg">

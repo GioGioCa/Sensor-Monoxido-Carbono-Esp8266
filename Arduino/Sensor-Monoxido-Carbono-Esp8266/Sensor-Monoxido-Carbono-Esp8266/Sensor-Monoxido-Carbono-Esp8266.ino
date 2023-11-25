@@ -19,6 +19,7 @@
 
 bool notificacionEnviada = false; 
 BlynkTimer timer;
+int estadoVentana;
 
 void sendSensor(){
  int nivelGas = analogRead(sensor);
@@ -27,27 +28,32 @@ void sendSensor(){
   // Leer el valor del sensor y tomar acciones en función de ese valor
   if(nivelGas > 500 && !notificacionEnviada){
     abrirVentana();
-    Blynk.logEvent("YOUR_BLYNK_LOG_EVENT",String("Se detecto una fuga de gas!!! " ) +nivelGas + String(" PPM"));
+    digitalWrite(alarma, HIGH);
+    Blynk.logEvent("fuga_de_gas",String("Se detecto una fuga de gas!!! " ) +nivelGas + String(" PPM"));
     // Activacion de indicador de notificacion, previene desperdicio de notificaciones
     notificacionEnviada = true;  
   } else {
+    delay(10000);
+    digitalWrite(alarma, LOW);
     cerrarVentana();
     notificacionEnviada = false;
   }
-
 }
 
 void abrirVentana(){
-  digitalWrite(alarma, HIGH);
   digitalWrite(ventana_open, HIGH);
   digitalWrite(ventana_cerrar, LOW);
 }
 
 void cerrarVentana(){
-  delay(10000);
-  digitalWrite(alarma, LOW);
   digitalWrite(ventana_open, LOW);
   digitalWrite(ventana_cerrar, HIGH);
+}
+
+BLYNK_WRITE(V1){
+  estadoVentana = param.asInt();
+  estadoVentana? abrirVentana() : cerrarVentana() ;
+  estadoVentana = 0;
 }
 
 void setup(){
